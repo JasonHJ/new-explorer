@@ -12,11 +12,11 @@ export async function fetchRevenue() {
     const { db } = await connectToDatabase();
     console.log('Data fetch completed after 3 seconds.');
     const movies = await db
-                            .collection("movies")
+                            .collection("cctx")
                             .find({})
-                            .sort({ metacritic: -1 })
                             .limit(20)
                             .toArray();
+    console.log('fetchRevenue', movies)
     return movies;
   } catch (error) {
     console.error('Database Error:', error);
