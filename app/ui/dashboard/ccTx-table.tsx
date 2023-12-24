@@ -1,5 +1,6 @@
 import { Table } from "antd";
 import type { ColumnsType } from 'antd/es/table';
+import { fetchLastCcTxs } from "@/app/lib/data/dashboard";
 
 interface DataType {
   key: React.Key;
@@ -192,7 +193,9 @@ const columns: ColumnsType<DataType> = [
   }
 ];
 
-export default function CcTxTable() {
+export default async function CcTxTable() {
+  const lastCcTxs = await fetchLastCcTxs();
+
   return (
     <main>
       <Table columns={columns} dataSource={data} onChange={()=> {}} />
