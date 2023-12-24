@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  darkMode: "class",
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -17,7 +18,17 @@ const config: Config = {
           500: '#0070F3',
           600: '#2F6FEB',
         },
+        light: {
+          999: "#999"
+        },
+        normal: {
+          111: '#345D9D'
+        }
       },
+      backgroundImage: {
+        "theme-light": "url('/bg-light.png')",
+        "theme-dark": "url('/bg-dark.png')",
+      }
     },
     keyframes: {
       shimmer: {
@@ -27,6 +38,18 @@ const config: Config = {
       },
     },
   },
+  variants: {
+    extend: {
+      margin: ["first"],
+      borderRadius: ["first", "last"],
+      zIndex: ["hover"],
+      borderWidth: ["dark", "last"],
+      backgroundImage: ["dark"],
+      backgroundColor: ["dark"],
+      textColor: ["dark", "visited"],
+    },
+  },
   plugins: [require('@tailwindcss/forms')],
 };
+
 export default config;

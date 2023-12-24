@@ -180,9 +180,75 @@ const revenue = [
   { month: 'Dec', revenue: 4800 },
 ];
 
+const chartdata = [
+  {
+    name: "Jan",
+    "Number of threatened species": 2488,
+    date: '2023-1-1'
+  },
+  {
+    name: "",
+    "Number of threatened species": 2488,
+    date: '2023-1-2'
+  },
+  {
+    name: "Feb",
+    "Number of threatened species": 1445,
+    date: '2023-1-2'
+  },
+  {
+    name: "Mar",
+    "Number of threatened species": 743,
+    date: '2023-1-2'
+  },
+  {
+    name: "Apr",
+    "Number of threatened species": 281,
+    date: '2023-1-2'
+  },
+  {
+    name: "May",
+    "Number of threatened species": 251,
+    date: '2023-1-2'
+  },
+  {
+    name: "Jun",
+    "Number of threatened species": 232,
+    date: '2023-1-2'
+  },
+  {
+    name: "Jul",
+    "Number of threatened species": 98,
+    date: '2023-1-2'
+  },
+  {
+    name: "Aug",
+    "Number of threatened species": 98,
+  },
+  {
+    name: "Sep",
+    "Number of threatened species": 98,
+  },
+  {
+    name: "Oct",
+    "Number of threatened species": 98,
+    date: '2023-1-2'
+  },
+  {
+    name: "Nov",
+    "Number of threatened species": 98,
+  },
+  {
+    name: "Dec",
+    "Number of threatened species": 98,
+    date: '2023-1-2'
+  }
+];
+
 module.exports = {
   users,
   customers,
   invoices,
   revenue,
+  chartdata
 };
