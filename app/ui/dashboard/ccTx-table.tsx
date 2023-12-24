@@ -194,7 +194,7 @@ const columns: ColumnsType<DataType> = [
 ];
 
 export default async function CcTxTable() {
-  const lastCcTxs = await fetchLastCcTxs();
+  // const lastCcTxs = await fetchLastCcTxs();
 
   return (
     <main>
