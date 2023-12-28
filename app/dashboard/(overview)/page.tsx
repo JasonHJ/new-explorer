@@ -3,8 +3,11 @@ import CcVolChart from '@/app/ui/dashboard/ccVol-chart';
 import CctxChart from '@/app/ui/dashboard/cctx-chart';
 import TokenLists from '@/app/ui/dashboard/token-lists';
 import CcTxLists from '@/app/ui/dashboard/ccTx-lists';
+import { fetchLastCcTxs } from '@/app/lib/data/dashboard';
 
 export default async function Page() {
+  const lastCcTxs = await fetchLastCcTxs();
+
   return (
     <main className="flex flex-col items-center">
       <div className="flex justify-center mb-5 w-10/12">

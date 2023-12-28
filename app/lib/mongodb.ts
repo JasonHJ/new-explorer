@@ -22,10 +22,13 @@ export async function connectToDatabase() {
   if (cachedClient && cachedDb) {
     return { client: cachedClient, db: cachedDb }
   }
+
   console.log('start connect')
-  const client = await MongoClient.connect(uri, options)
+  const client = new MongoClient(uri);
+  await client.connect()
   console.log('connected')
-  const db = await client.db(process.env.MONGODB_DB)
+
+  const db = await client.db(process.env.MONGODB_DB, options)
 
   cachedClient = client
   cachedDb = db
